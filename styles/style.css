@@ -1,0 +1,81 @@
+@font-face {
+	font-family: sinso;
+	src: url("../fonts/Simpsonfont DEMO.otf") format("opentype");
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: sinso;
+	color: white;
+	--dona: #df2975;
+	--skin: #ebdc09;
+}
+
+body {
+	background-color: var(--skin);
+}
+
+header {
+	background-color: var(--dona);
+}
+
+main {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+section {
+	padding: 10px;
+	width: 40%;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+}
+
+input, button {
+	background-color: var(--dona);
+	color: white;
+	padding: 5px;
+	border: none;
+	border-radius: 10px;
+	width: 100%;
+}
+
+label, input {
+	margin-bottom: 5px;
+	display: inline-block;
+}
+
+section > div {
+	width: 100%;
+}
+
+div > input, label  {
+	width: 49%;
+	margin-right: 0;
+	margin-left: 0;
+}
+
+::placeholder {
+	color: #ffbcd8;
+}
+
+.card {
+	padding: 10px;
+	background-color: var(--dona);
+	color: white;
+	display: flex;
+	align-items: center;
+    flex-direction: column;
+	border-radius: 20px;
+	margin: 10px;
+}
+
+button {
+	margin-top: 10px;
+	width: 65%;
+	font-size: 20px;
+	height: 5vh;
+}
