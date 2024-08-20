@@ -1,6 +1,6 @@
 const cardQuantity = document.getElementById("cardQuantity")
 const cardButton = document.getElementById("cardButton")
-const searchCharacter = document.getElementById("cardName")
+const searchCharacter = document.getElementById("characterSearch")
 const cards = document.getElementById("cardContainer")
 
 let quotes = []
@@ -19,6 +19,14 @@ cardButton.addEventListener("click", () => {
 		quotes.forEach((quote) => {
 			generateCard(quote)
 		})
+	})
+})
+
+searchCharacter.addEventListener("keyup", () => {
+	cardContainer.innerHTML = ""
+	quotes.forEach((quote) => {
+		if (quote["character"].includes(searchCharacter.value))
+			generateCard(quote)
 	})
 })
 
